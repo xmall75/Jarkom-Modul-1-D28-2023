@@ -79,6 +79,34 @@ Hasil submit jawaban ke terminal adalah sebagai berikut.
 
 
 
+## No. 10
+Soal : 
+
+`Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet`
+
+Untuk soal ini saya menggunakan referensi youtube `https://youtu.be/GY_0TeV8Juw?si=pheIKm1YrbCypZ4L` sebagai panduan dalam mengerjakan soal ini. Dikarenakan kita ingin mencari kredensial user yang mencoba login menggunakan telnet. Kita dapat mencoba melakukan filter dengan kueri `tcp contains "Password". 
+
+![filter](src/no10/filter.jpg)
+
+Setelah itu kita dapat melakukan follow stream seperti berikut.
+
+![follow](src/no10/follow.jpg)
+
+Setelah melakukan follow, kita akan mendapatkan hasil seperti ini.
+
+![kredensial](src/no10/kredensial.jpg)
+
+Dari hasil tersebut kita mendapatkan username berupa `dhafin` (username tidak berupa ddhhaaffiin karena berdasarkan youtube tersebut ketika melakukan login, nama username akan agak menjadi double seperti itu). Kita juga berhasil mendapatkan password berupa `kesayangannyak0k0`. Kita dapat mencoba mengsubmit jawaban ke terminal setelah menemukan username dan password tersebut.
+
+![hasil](src/no10/hasil.jpg)
+
+Bisa dilihat kita berhasil mendapatkan flag setelah mengsubmit jawaban tersebut.
+
+
+
+
+
+
 
 
 
