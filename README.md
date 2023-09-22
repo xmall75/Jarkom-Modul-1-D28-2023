@@ -1,4 +1,4 @@
-# Jarkom-Modul-1-D28-2023
+![image](https://github.com/xmall75/Jarkom-Modul-1-D28-2023/assets/115076652/dcaee7fb-6067-4461-822c-32b5170f2302)# Jarkom-Modul-1-D28-2023
 
 
 ## No. 6
@@ -31,3 +31,23 @@ Sekarang dapat kita coba masukkan jawaban di terminal.
 ![hasil](/src/no6/hasil.jpg)
 
 Seperti yang dilihat, jawaban benar dan kita berhasil mendapatkan flag.
+
+
+## No. 7
+Soal : 
+
+`Berapa jumlah packet yang menuju IP 184.87.193.88?`
+
+Untuk menjawab soal ini kita perlu menggunakan filter pada file PCAP yang diberikan. Filter yang kita gunakan yakni `ip.dst == 184.87.193.88`.
+
+![filter](src/no7/filter.jpg)
+
+Dari filter tersebut dapat kita lihat pada bagian kanan bawah yang menunjukkan jumlah paket yang menuju IP 184.87.193.88, yaitu berjumlah 6.
+
+![packet](src/no7/packet.jpg)
+
+Setelah itu dapat kita coba submit jawaban ke terminal.
+
+![hasil](src/no7/hasil.jpg)
+
+Seperti yang dilihat, kita mendapatkan jawaban benar dan mendapatkan flag.
