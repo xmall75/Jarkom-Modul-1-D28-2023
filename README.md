@@ -1,5 +1,9 @@
 # Jarkom-Modul-1-D28-2023
 
+Anggota Kelompok D28 :
+1. Revanantyo Dwigantara - 5025211113
+2. Charles = 5025211082
+
 ## No. 1
 Soal :
 
