@@ -115,7 +115,11 @@ Pada soal c, karena hanya ada 2 IP yang ter-capture, kita bisa mencoba satu-satu
 Soal : 
 
 ```
-Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik, Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga. ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid". ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak. bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
+Seorang anak bernama Udin Berteman dengan SlameT yang merupakan seorang penggemar film detektif. sebagai teman yang baik,
+Ia selalu mengajak slamet untuk bermain valoranT bersama. suatu malam, terjadi sebuah hal yang tak terdUga.
+ketika udin mereka membuka game tersebut, laptop udin menunjukkan sebuah field text dan Sebuah kode Invalid bertuliskan "server SOURCE ADDRESS 7812 is invalid".
+ketika ditelusuri di google, hasil pencarian hanya menampilkan a1 e5 u21. jiwa detektif slamet pun bergejolak.
+bantulah udin dan slamet untuk menemukan solusi kode error tersebut.
 ```
 
 Dari soal di atas kita pertama-tama dapat menganalisa soal terlebih dahulu. Berdasarkan pengamatan, huruf kapital pada paragraf tidaklah mengikuti standar KBBI. Sehingga jika kita mengambil seluruh huruf kapitalnya akan termuncul sebuah kata `SUBSTITUSI`. Setelah itu terdapat hint `server SOURCE ADDRESS 7812 is invalid` dan `a1 e5 u21`. Mari kita selesaikan satu per satu.
@@ -171,7 +175,8 @@ Seperti yang dilihat, kita mendapatkan jawaban benar dan mendapatkan flag.
 Soal : 
 
 ```
-Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
+Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80!
+(Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)
 ```
 
 Untuk soal ini kita cukup membaca referensi pada modul https://github.com/arsitektur-jaringan-komputer/Modul-Jarkom/tree/master/Modul-1. Dikarenakan diminta kueri filter menuju port 80, terdapat dua port yang perlu kita tulis yaitu tcp dan udp. Sehingga didapatkan queri berupa `tcp.dstport == 80 || udp.dstport == 80`.
@@ -186,7 +191,8 @@ Hasil setelah mengsubmit jawaban ke terminal adalah sebagai berikut.
 Soal : 
 
 ```
-Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
+Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari
+alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!
 ```
 
 Sama seperti no 8, kita bisa membaca modul untuk mencari tahu cara untuk melakukan filter sesuai permintaan soal, yakni `ip.src == 10.51.40.1 && ip.dst != 10.39.55.34`. Pada soal ini kita berfokus untuk memanipulasi relational operator untuk mendapatkan jawaban yang diinginkan.
