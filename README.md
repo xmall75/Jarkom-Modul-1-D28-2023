@@ -1,5 +1,111 @@
 # Jarkom-Modul-1-D28-2023
 
+## No. 1
+Soal :
+
+```
+User melakukan berbagai aktivitas dengan menggunakan protokol FTP. Salah satunya adalah mengunggah suatu file.
+a. Berapakah sequence number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+b. Berapakah acknowledge number (raw) pada packet yang menunjukkan aktivitas tersebut? 
+c. Berapakah sequence number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+d. Berapakah acknowledge number (raw) pada packet yang menunjukkan response dari aktivitas tersebut?
+```
+
+Pada soal pertama, kita dapat mencari paket yang melakukan unggah file yaitu dengan kata kunci `STOR`. Selain itu, kita harus mencari response dari `STOR` tadi, yang mana terlihat pada 2 packet di bawah `STOR`. 
+
+![stor](src/no1/1.png)
+
+Setelah itu, kita bisa buka packet `STOR` dan response dan didapatkan sequence number (raw) serta acknowledge number (raw) dari kedua packet tersebut.
+
+![2](src/no1/2.png)
+
+![3](src/no1/3.png)
+
+Sehingga, jawaban dapat langsung kita masukkan ke dalam nc 10.21.78.111 12345 dan kita dapatkan flag-nya.
+
+![flag](src/no1/flag.png)
+
+
+## No. 2
+Soal :
+
+`Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!`
+
+Untuk menyelesaikan soal ini, kita dapat melakukan filtering menggunakan `http.server`. Setelah itu, kita bisa langsung melihat web server apa yang digunakan pada portal praktikum Jaringan Komputer.
+
+![server](src/no2/1.png)
+
+Kita dapatkan web server-nya yaitu gunicorn. Langsung saja kita masukkan ke dalam nc 10.21.78.111 13579.
+
+![flag](src/no2/flag.png)
+
+
+## No. 3
+Soal :
+```
+Dapin sedang belajar analisis jaringan. Bantulah Dapin untuk mengerjakan soal berikut:
+a. Berapa banyak paket yang tercapture dengan IP source maupun destination address adalah 239.255.255.250 dengan port 3702?
+b. Protokol layer transport apa yang digunakan?
+```
+
+Untuk menjawab soal ini, kita bisa melakukan filtering dengan mencari port 3702 saja.
+
+![filter](src/no3/1.png)
+
+Setelah itu, untuk menjawab soal a, kita bisa hitung saja jumlah packet yang IP source maupun destination-nya adalah 239.255.255.250 yaitu berjumlah 21.
+Untuk menjawab soal b, kita bisa langsung saja lihat protocol apa yang digunakan.
+
+![protocol](src/no3/2.png)
+
+Langsung saja kita bisa masukkan jawabannya ke dalam nc 10.21.78.111 13590.
+
+![flag](src/no3/flag.png)
+
+
+## No. 4
+Soal :
+
+`Berapa nilai checksum yang didapat dari header pada paket nomor 130?`
+
+Untuk menjawab soal ini kita bisa langsung saja mencari packet nomor 130 lalu lihat checksum-nya.
+
+![130](src/no4/1.png)
+
+Setelah itu, bisa langsung kita masukkan ke dalam nc 10.21.78.111 13591.
+
+![flag](src/no4/flag.png)
+
+
+## No. 5
+Soal :
+```
+Elshe menemukan suatu file packet capture yang menarik. Bantulah Elshe untuk menganalisis file packet capture tersebut.
+a. Berapa banyak packet yang berhasil di capture dari file pcap tersebut?
+b. Port berapakah pada server yang digunakan untuk service SMTP?
+c. Dari semua alamat IP yang tercapture, IP berapakah yang merupakan public IP?
+```
+
+Pada soal ini kita diberikan file pcap dan zip. File zip tersebut dikunci. Kita diharuskan untuk menemukan packet yang menarik dan membuka kunci zip untuk bisa menjawab soal di atas.
+
+![interesting](src/no5/1.png)
+
+Tapi, sepertinya akan susah untuk mencari packet tersebut. Jadi, langkah yang bisa kita lakukan adalah dengan melihat semua lalu lintas jaringan yang terjadi dengan melakukan `follow tcp stream`. Pilih salah satu packet, lalu pilih `follow tcp stream` untuk melihat rekam jejak yang terjadi. Scroll ke bawah hingga kita menemukan jackpot.
+
+![password](src/no5/2.png)
+
+Password yang kita dapat bisa kita decode dengan Base64. Sehingga, kita dapatkan password untuk membuka zipfile-nya.
+
+![decode](src/no5/3.png)
+
+Password tersebut kita gunakan untuk membuka zipfile dan kita bisa dapatkan host serta port untuk netcat-nya.
+Setelah itu, untuk menjawab pertanyaan a, kita hanya perlu lihat berapa banyak packet yang ter-capture, yaitu 60.
+
+Untuk menjawab soal b, kita bisa melihat port yang digunakan pada packet yang protocol-nya SMTP, yaitu 25.
+
+Pada soal c, karena hanya ada 2 IP yang ter-capture, kita bisa mencoba satu-satu dan ternyata yang merupakan IP public adalah 74.53.140.153.
+
+![flag](src/no5/flag.png)
+
 
 ## No. 6
 Soal : 
