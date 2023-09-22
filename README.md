@@ -1,4 +1,4 @@
-![image](https://github.com/xmall75/Jarkom-Modul-1-D28-2023/assets/115076652/dcaee7fb-6067-4461-822c-32b5170f2302)# Jarkom-Modul-1-D28-2023
+# Jarkom-Modul-1-D28-2023
 
 
 ## No. 6
@@ -51,3 +51,20 @@ Setelah itu dapat kita coba submit jawaban ke terminal.
 ![hasil](src/no7/hasil.jpg)
 
 Seperti yang dilihat, kita mendapatkan jawaban benar dan mendapatkan flag.
+
+
+## No. 8
+Soal : 
+
+`Berikan kueri filter sehingga wireshark hanya mengambil semua protokol paket yang menuju port 80! (Jika terdapat lebih dari 1 port, maka urutkan sesuai dengan abjad)`
+
+Untuk soal ini kita cukup membaca referensi pada modul https://github.com/arsitektur-jaringan-komputer/Modul-Jarkom/tree/master/Modul-1. Dikarenakan diminta kueri filter menuju port 80, terdapat dua port yang perlu kita tulis yaitu tcp dan udp. Sehingga didapatkan queri berupa `tcp.dstport == 80 || udp.dstport == 80`.
+
+Hasil setelah mengsubmit jawaban ke terminal adalah sebagai berikut.
+
+![hasil](src/no8/hasil.jpg)
+
+
+
+
+
