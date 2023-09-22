@@ -1,4 +1,4 @@
-# Jarkom-Modul-1-D28-2023
+![image](https://github.com/xmall75/Jarkom-Modul-1-D28-2023/assets/115076652/938c7bb8-ec17-4e4b-b499-32dd44586d16)# Jarkom-Modul-1-D28-2023
 
 
 ## No. 6
@@ -63,6 +63,20 @@ Untuk soal ini kita cukup membaca referensi pada modul https://github.com/arsite
 Hasil setelah mengsubmit jawaban ke terminal adalah sebagai berikut.
 
 ![hasil](src/no8/hasil.jpg)
+
+
+
+## No. 9
+Soal : 
+
+`Berikan kueri filter sehingga wireshark hanya mengambil paket yang berasal dari alamat 10.51.40.1 tetapi tidak menuju ke alamat 10.39.55.34!`
+
+Sama seperti no 8, kita bisa membaca modul untuk mencari tahu cara untuk melakukan filter sesuai permintaan soal, yakni `ip.src == 10.51.40.1 && ip.dst != 10.39.55.34`. Pada soal ini kita berfokus untuk memanipulasi relational operator untuk mendapatkan jawaban yang diinginkan.
+
+Hasil submit jawaban ke terminal adalah sebagai berikut. 
+
+![hasil](src/no9/hasil.jpg)
+
 
 
 
