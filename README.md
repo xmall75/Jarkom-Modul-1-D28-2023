@@ -84,7 +84,7 @@ Soal :
 
 `Sebutkan kredensial yang benar ketika user mencoba login menggunakan Telnet`
 
-Untuk soal ini saya menggunakan referensi youtube `https://youtu.be/GY_0TeV8Juw?si=pheIKm1YrbCypZ4L` sebagai panduan dalam mengerjakan soal ini. Dikarenakan kita ingin mencari kredensial user yang mencoba login menggunakan telnet. Kita dapat mencoba melakukan filter dengan kueri `tcp contains "Password". 
+Untuk soal ini saya menggunakan referensi youtube https://youtu.be/GY_0TeV8Juw?si=pheIKm1YrbCypZ4L sebagai panduan dalam mengerjakan soal ini. Dikarenakan kita ingin mencari kredensial user yang mencoba login menggunakan telnet. Kita dapat mencoba melakukan filter dengan kueri `tcp contains "Password". 
 
 ![filter](src/no10/filter.jpg)
 
