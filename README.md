@@ -1,4 +1,4 @@
-![image](https://github.com/xmall75/Jarkom-Modul-1-D28-2023/assets/115076652/938c7bb8-ec17-4e4b-b499-32dd44586d16)# Jarkom-Modul-1-D28-2023
+# Jarkom-Modul-1-D28-2023
 
 
 ## No. 6
